@@ -36,3 +36,31 @@ if __name__ == "__main__":
 # --------------------------------------------
 
 
+class bank:
+  def __init__(self,account_holder,balance = 0):
+      self.account_holder = account_holder
+      self.balance = balance
+
+  def display(self):
+    print(f"Your account name is : {self.account_holder} ")
+
+  def deposit(self, amount):
+    self.balance += amount
+    print(f"Deposited amount {amount}. Your current balance is: {self.balance}")
+
+  def withdraw(self, amount):
+    self.balance -= amount
+    print(f"Withdraw amount {amount}. Your current balance is: {self.balance}")
+
+
+# Test the bank class
+if __name__ == "__main__":
+    # Create a bank instance
+    acc1 = bank("Waleed")
+    acc1.display()
+    acc1.deposit(1000)
+    acc1.withdraw(200)
+
+
+
+# -----------------------------
